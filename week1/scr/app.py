@@ -1,0 +1,1 @@
+product_names = ["coke-zero", "corona", "water", "sprite"]
