@@ -6,4 +6,7 @@ print("2-Create New Produc")
 print("3-Update EXisting Product")
 print("4-Delete Product")
 
-user_input= input("Please chose from the above options '0-4'")
+user_input= int(input("Please chose from the above options '0-4'"))
+
+if user_input == 0:
+    exit()
