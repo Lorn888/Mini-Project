@@ -2,7 +2,7 @@ product_list = ["coke-zero", "corona", "water", "sprite"]
 
 main_menu_options = ["0-Exit App", "1-Product Menu"]
 
-product_menu_options = ["0-Return to the Main Menu","1-Products List","2-Create New Produc","3-Update EXisting Product"]
+product_menu_options = ["0-Return to the Main Menu","1-Products List","2-Create New Produc","3-Update EXisting Product, 4-Delete Product"]
 
 print(main_menu_options)
 
@@ -27,6 +27,12 @@ elif main_menu_input == 1:
         product_to_update_input = int(input("Chose the product to update"))
         new_product_name = input("Type the name of the new product")
         product_list[product_to_update_input] = new_product_name
+        print(product_list)
+    elif product_menu_input == 4:
+        for product in product_list:
+            print(f"{product_list.index(product)}-{product}")
+        product_to_delete = int(input("Chose the product to delete"))
+        product_list.remove(product_list[product_to_delete])
         print(product_list)
 
         
