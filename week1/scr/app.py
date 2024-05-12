@@ -26,6 +26,7 @@ elif main_menu_input == 1:
             print(f"{product_list.index(product)}-{product}")
         product_to_update_input = int(input("Chose the product to update"))
         new_product_name = input("Type the name of the new product")
-        
+        product_list[product_to_update_input] = new_product_name
+        print(product_list)
 
         
