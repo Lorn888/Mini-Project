@@ -15,6 +15,7 @@ elif main_menu_input == 1:
     product_menu_input = int(input("Chose from above product menu"))
     if product_menu_input == 0:
         # Figure out how to return to the main menu
+        # Learn loops
         exit()
     elif product_menu_input == 1:
         print(product_list)
