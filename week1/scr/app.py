@@ -10,3 +10,5 @@ user_input= int(input("Please chose from the above options '0-4'"))
 
 if user_input == 0:
     exit()
+elif user_input == 1:
+    print(product_names)
