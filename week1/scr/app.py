@@ -6,7 +6,7 @@ product_menu_options = ["0-Return to the Main Menu","1-Products List","2-Create 
 
 print(main_menu_options)
 
-main_menu_input= int(input("Please chose from the above 2 options '0-1'"))
+main_menu_input= int(input("Chose from the above 2 options '0-1'"))
 
 if main_menu_input == 0:
     exit()
@@ -25,5 +25,7 @@ elif main_menu_input == 1:
         # No idea how to update product
         for product in product_list:
             print(f"{product_list.index(product)}-{product}")
+        product_to_update_input = int(input("Chose the product to update"))
+        
 
         
