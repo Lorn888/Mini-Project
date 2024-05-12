@@ -12,13 +12,15 @@ if main_menu_input == 0:
     exit()
 elif main_menu_input == 1:
     print(product_menu_options)
-    product_menu_input = input("Chose from above product menu")
+    product_menu_input = int(input("Chose from above product menu"))
     if product_menu_input == 0:
         # Figure out how to return to the main menu
         exit()
     elif product_menu_input == 1:
         print(product_list)
-
-
+    elif product_menu_input == 2:
+        new_product_input = input("type the name of the product")
+        product_list.append(new_product_input)
+        
 
         
