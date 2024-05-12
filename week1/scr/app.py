@@ -6,34 +6,39 @@ product_menu_options = ["0-Return to the Main Menu","1-Products List","2-Create 
 
 print(main_menu_options)
 
-main_menu_input= int(input("Chose from the above 2 options '0-1'"))
+while True:
+    main_menu_input= int(input("Chose from the above 2 options '0-1'"))
+    if main_menu_input == 0:
+       break
+    elif main_menu_input == 1:
+        while True:
+            print(product_menu_options)
+            product_menu_input = int(input("Chose from above product menu"))
 
-if main_menu_input == 0:
-    exit()
-elif main_menu_input == 1:
-    print(product_menu_options)
-    product_menu_input = int(input("Chose from above product menu"))
-    if product_menu_input == 0:
-        # Figure out how to return to the main menu
-        # Learn loops
-        exit()
-    elif product_menu_input == 1:
-        print(product_list)
-    elif product_menu_input == 2:
-        new_product_input = input("type the name of the product")
-        product_list.append(new_product_input)
-    elif product_menu_input == 3:
-        for product in product_list:
-            print(f"{product_list.index(product)}-{product}")
-        product_to_update_input = int(input("Chose the product to update"))
-        new_product_name = input("Type the name of the new product")
-        product_list[product_to_update_input] = new_product_name
-        print(product_list)
-    elif product_menu_input == 4:
-        for product in product_list:
-            print(f"{product_list.index(product)}-{product}")
-        product_to_delete = int(input("Chose the product to delete"))
-        product_list.remove(product_list[product_to_delete])
-        print(product_list)
+            if product_menu_input == 0:
+                break
+
+            elif product_menu_input == 1:
+                print(product_list)
+
+            elif product_menu_input == 2:
+                new_product_input = input("type the name of the new product")
+                product_list.append(new_product_input)
+
+            elif product_menu_input == 3:
+               
+                for product in product_list:
+                    print(f"{product_list.index(product)}-{product}")
+                product_to_update_input = int(input("Chose the product to update"))
+                new_product_name = input("Type the name of the new product")
+                product_list[product_to_update_input] = new_product_name
+                print(product_list)
+                
+            elif product_menu_input == 4:
+                for product in product_list:
+                    print(f"{product_list.index(product)}-{product}")
+                product_to_delete = int(input("Chose the product to delete"))
+                product_list.remove(product_list[product_to_delete])
+                print(product_list)
 
         
