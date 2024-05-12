@@ -21,6 +21,9 @@ elif main_menu_input == 1:
     elif product_menu_input == 2:
         new_product_input = input("type the name of the product")
         product_list.append(new_product_input)
-        
+    elif product_menu_input == 3:
+        # No idea how to update product
+        for product in product_list:
+            print(f"{product_list.index(product)}-{product}")
 
         
