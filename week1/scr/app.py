@@ -6,7 +6,8 @@ product_menu_options = [
     "0-Return to the Main Menu",
     "1-Products List",
     "2-Create New Produc",
-    "3-Update EXisting Product, 4-Delete Product",
+    "3-Update EXisting Product",
+    "4-Delete Product",
 ]
 
 print(main_menu_options)
