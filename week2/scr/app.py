@@ -130,7 +130,7 @@ while True:
                 for order in orders_list:
                     print(f'{orders_list.index(order)}-{order}')
                 order_to_update = int(input("Chose order to update"))
-
+                
                 name_update_input = input("name:")
                 if len(name_update_input) > 0:
                     orders_list[order_to_update]["name"] = name_update_input
@@ -142,3 +142,9 @@ while True:
                 phone_update_input = input("phone:")
                 if len(phone_update_input) > 0:
                     orders_list[order_to_update]["phone"] = phone_update_input
+            
+            elif orders_menu_input == 5:
+                for order in orders_list:
+                    print(f'{orders_list.index(order)}-{order}')
+                order_to_delete = int(input("Chose order to delete"))
+                del orders_list[order_to_delete]
