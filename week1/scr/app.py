@@ -1,6 +1,9 @@
 product_list = ["coke-zero", "corona", "water", "sprite"]
 
-main_menu_options = ["0-Exit App", "1-Product Menu"]
+main_menu_options = [
+    "0-Exit App",
+    "1-Product Menu",
+    "2-Orders Menu"]
 
 product_menu_options = [
     "0-Return to the Main Menu",
@@ -10,10 +13,17 @@ product_menu_options = [
     "4-Delete Product",
 ]
 
+orders_menu_options = [
+    "0-Return to the Main Menu",
+    "1-Print orders dictionary",
+    "2-Create a new order"
+
+]
+
 print(main_menu_options)
 
 while True:
-    main_menu_input = int(input("Chose from the above 2 options '0-1'"))
+    main_menu_input = int(input("Chose from the above 3 options '0-2'"))
     if main_menu_input == 0:
         break
     elif main_menu_input == 1:
@@ -46,3 +56,5 @@ while True:
                 product_to_delete = int(input("Chose the product to delete"))
                 product_list.remove(product_list[product_to_delete])
                 print(product_list)
+
+
