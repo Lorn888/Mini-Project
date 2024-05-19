@@ -1,35 +1,36 @@
 product_list = ["coke-zero", "corona", "water", "sprite"]
 orders_list = [
+    # Test lists
     {
-        'name': 'Harry Potter',
-        'address': 'Unit 2, 12 Main Street, London',
-        'phone': '07954433211',
-        'order_status': 'PREPARING'
+        "name": "Harry Potter",
+        "address": "Unit 2, 12 Main Street, London",
+        "phone": "07954433211",
+        "order_status": "PREPARING",
     },
     {
-        'name': 'Hermione Granger',
-        'address': 'Apartment 4, 7 Baker Street, London',
-        'phone': '07891234567',
-        'order_status': 'PREPARING'
+        "name": "Hermione Granger",
+        "address": "Apartment 4, 7 Baker Street, London",
+        "phone": "07891234567",
+        "order_status": "PREPARING",
     },
     {
-        'name': 'Ron Weasley',
-        'address': 'Cottage 1, Ottery St Catchpole, Devon',
-        'phone': '07781234567',
-        'order_status': 'PREPARING'
+        "name": "Ron Weasley",
+        "address": "Cottage 1, Ottery St Catchpole, Devon",
+        "phone": "07781234567",
+        "order_status": "PREPARING",
     },
     {
-        'name': 'Albus Dumbledore',
-        'address': 'The Headmaster\'s Office, Hogwarts School of Witchcraft and Wizardry',
-        'phone': '07651234567',
-        'order_status': 'PREPARING'
+        "name": "Albus Dumbledore",
+        "address": "The Headmaster's Office, Hogwarts School of Witchcraft and Wizardry",
+        "phone": "07651234567",
+        "order_status": "PREPARING",
     },
     {
-        'name': 'Rubeus Hagrid',
-        'address': 'Hagrid\'s Hut, Hogwarts School of Witchcraft and Wizardry',
-        'phone': '07551234567',
-        'order_status': 'PREPARING'
-    }
+        "name": "Rubeus Hagrid",
+        "address": "Hagrid's Hut, Hogwarts School of Witchcraft and Wizardry",
+        "phone": "07551234567",
+        "order_status": "PREPARING",
+    },
 ]
 
 main_menu_options = ["0-Exit App", "1-Product Menu", "2-Orders Menu"]
@@ -55,8 +56,10 @@ print(main_menu_options)
 
 while True:
     main_menu_input = int(input("Chose from the above 3 options '0-2'"))
+
     if main_menu_input == 0:
         break
+
     elif main_menu_input == 1:
         while True:
             print(product_menu_options)
@@ -87,15 +90,20 @@ while True:
                 product_to_delete = int(input("Chose the product to delete"))
                 product_list.remove(product_list[product_to_delete])
                 print(product_list)
+
     elif main_menu_input == 2:
+        
         while True:
+
             print(orders_menu_options)
             orders_menu_input = int(input("Chose from above Orders Menu"))
+
             if orders_menu_input == 0:
                 break
+
             elif orders_menu_input == 1:
                 print(orders_list)
-                # Orders list or orders dictionary?
+
             elif orders_menu_input == 2:
                 customer_name_input = input("Insert Customer name eg.'Harry Potter'")
                 # name_list = customer_name_input.split(" ")
@@ -119,18 +127,26 @@ while True:
                     "order status": order_status,
                 }
                 orders_list.append(customer_order)
+
             elif orders_menu_input == 3:
                 for order in orders_list:
-                    print(f'{orders_list.index(order)}-{order}')
-                order_status_to_update_input = int(input("Chose the order to update the status"))
-                print(f"{order_status_to_update_input}-{orders_list[order_status_to_update_input]['order_status']}")
+                    print(f"{orders_list.index(order)}-{order}")
+                order_status_to_update_input = int(
+                    input("Chose the order to update the status")
+                )
+                print(
+                    f"{order_status_to_update_input}-{orders_list[order_status_to_update_input]['order_status']}"
+                )
                 updated_status_input = input("What would you like to update it to?")
-                orders_list[order_status_to_update_input]['order_status'] = updated_status_input
+                orders_list[order_status_to_update_input][
+                    "order_status"
+                ] = updated_status_input
+
             elif orders_menu_input == 4:
                 for order in orders_list:
-                    print(f'{orders_list.index(order)}-{order}')
+                    print(f"{orders_list.index(order)}-{order}")
                 order_to_update = int(input("Chose order to update"))
-                
+
                 name_update_input = input("name:")
                 if len(name_update_input) > 0:
                     orders_list[order_to_update]["name"] = name_update_input
@@ -142,9 +158,9 @@ while True:
                 phone_update_input = input("phone:")
                 if len(phone_update_input) > 0:
                     orders_list[order_to_update]["phone"] = phone_update_input
-            
+
             elif orders_menu_input == 5:
                 for order in orders_list:
-                    print(f'{orders_list.index(order)}-{order}')
+                    print(f"{orders_list.index(order)}-{order}")
                 order_to_delete = int(input("Chose order to delete"))
                 del orders_list[order_to_delete]
