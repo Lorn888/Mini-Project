@@ -2,8 +2,14 @@
 # product_list = ["coke-zero", "corona", "water", "sprite"]
 try:
     with open("week3//data//products.txt", "r") as file:
-        contents = file.read()
-        print(contents)
+        products_file_contents = file.read()
+        print(products_file_contents)
+except Exception as e:
+    print(e)
+try:
+    with open("week3//data//couriers.txt", "r") as file:
+        couriers_file_contents = file.read()
+        print(couriers_file_contents)
 except Exception as e:
     print(e)
 
