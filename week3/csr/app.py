@@ -2,7 +2,7 @@ import json
 product_list = ["coke-zero", "corona", "water", "sprite"]
 orders_list = []
 try:
-    with open("txt.json", "r") as file:
+    with open("week3//txt.json", "r") as file:
         orders_list = json.load(file)
 except Exception as e:
     print(e)
