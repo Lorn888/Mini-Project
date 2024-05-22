@@ -1,45 +1,39 @@
-import json
-product_list = ["coke-zero", "corona", "water", "sprite"]
-orders_list = []
-try:
-    with open("week3//txt.json", "r") as file:
-        orders_list = json.load(file)
-except Exception as e:
-    print(e)
 
-# orders_list = [
+product_list = ["coke-zero", "corona", "water", "sprite"]
+
+orders_list = [
     # Test lists
-    # {
-    #     "name": "Harry Potter",
-    #     "address": "Unit 2, 12 Main Street, London",
-    #     "phone": "07954433211",
-    #     "order_status": "PREPARING",
-    # },
-    # {
-    #     "name": "Hermione Granger",
-    #     "address": "Apartment 4, 7 Baker Street, London",
-    #     "phone": "07891234567",
-    #     "order_status": "PREPARING",
-    # },
-    # {
-    #     "name": "Ron Weasley",
-    #     "address": "Cottage 1, Ottery St Catchpole, Devon",
-    #     "phone": "07781234567",
-    #     "order_status": "PREPARING",
-    # },
-    # {
-    #     "name": "Albus Dumbledore",
-    #     "address": "The Headmaster's Office, Hogwarts School of Witchcraft and Wizardry",
-    #     "phone": "07651234567",
-    #     "order_status": "PREPARING",
-    # },
-    # {
-    #     "name": "Rubeus Hagrid",
-    #     "address": "Hagrid's Hut, Hogwarts School of Witchcraft and Wizardry",
-    #     "phone": "07551234567",
-    #     "order_status": "PREPARING",
-    # },
-# ]
+    {
+        "name": "Harry Potter",
+        "address": "Unit 2, 12 Main Street, London",
+        "phone": "07954433211",
+        "order_status": "PREPARING",
+    },
+    {
+        "name": "Hermione Granger",
+        "address": "Apartment 4, 7 Baker Street, London",
+        "phone": "07891234567",
+        "order_status": "PREPARING",
+    },
+    {
+        "name": "Ron Weasley",
+        "address": "Cottage 1, Ottery St Catchpole, Devon",
+        "phone": "07781234567",
+        "order_status": "PREPARING",
+    },
+    {
+        "name": "Albus Dumbledore",
+        "address": "The Headmaster's Office, Hogwarts School of Witchcraft and Wizardry",
+        "phone": "07651234567",
+        "order_status": "PREPARING",
+    },
+    {
+        "name": "Rubeus Hagrid",
+        "address": "Hagrid's Hut, Hogwarts School of Witchcraft and Wizardry",
+        "phone": "07551234567",
+        "order_status": "PREPARING",
+    },
+]
 
 main_menu_options = ["0-Exit App", "1-Product Menu", "2-Orders Menu"]
 
@@ -117,8 +111,8 @@ while True:
                 customer_name_input = input("Insert Customer name eg.'Harry Potter'")
                 # name_list = customer_name_input.split(" ")
                 # print(name_list)
-                customer_adress_input = input(
-                    "Insert Customer adress eg.'Unit 2, 12 Main Street, LONDON, WH1 2ER'"
+                customer_address_input = input(
+                    "Insert Customer address eg.'Unit 2, 12 Main Street, LONDON, WH1 2ER'"
                 )
                 customer_phone_input = input(
                     "Insert Customer phone number eg.'0789887334'"
@@ -131,19 +125,11 @@ while True:
 
                 customer_order = {
                     "name": customer_name_input,
-                    "address": customer_adress_input,
+                    "address": customer_address_input,
                     "phone": customer_phone_input,
                     "order_status": order_status,
                 }
                 orders_list.append(customer_order)
-                try:
-                    with open("txt.json", "w" ) as file:
-                        json.dump(orders_list, file)
-                        print("Dictionary written to file")
-                except Exception as e:
-                    print(e)
-
-
             elif orders_menu_input == 3:
                 for order in orders_list:
                     print(f"{orders_list.index(order)}-{order}")
@@ -167,9 +153,9 @@ while True:
                 if len(name_update_input) > 0:
                     orders_list[order_to_update]["name"] = name_update_input
 
-                adress_update_input = input("address:")
-                if len(adress_update_input) > 0:
-                    orders_list[order_to_update]["address"] = adress_update_input
+                address_update_input = input("address:")
+                if len(address_update_input) > 0:
+                    orders_list[order_to_update]["address"] = address_update_input
 
                 phone_update_input = input("phone:")
                 if len(phone_update_input) > 0:
