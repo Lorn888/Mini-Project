@@ -1,5 +1,13 @@
 
-product_list = ["coke-zero", "corona", "water", "sprite"]
+# product_list = ["coke-zero", "corona", "water", "sprite"]
+try:
+    with open("week3//data//products.txt", "r") as file:
+        contents = file.read()
+        print(contents)
+except Exception as e:
+    print(e)
+
+
 
 orders_list = [
     # Test lists
